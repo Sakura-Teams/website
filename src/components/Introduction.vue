@@ -14,5 +14,6 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-style: italic;
 }
 </style>

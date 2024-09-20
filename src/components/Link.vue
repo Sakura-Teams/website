@@ -14,7 +14,7 @@
 <style scoped>
 
 div {
-    width: 450px;
+    width: 440px;
     float: left;
     border: 5px solid #7fd66e;
     border-radius: 10px;
