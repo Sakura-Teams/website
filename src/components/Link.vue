@@ -8,7 +8,7 @@ function goto(url) {
 <button @click="goto('http://haoz1.mcaltb.top/')">
     <p>Buy</p>
 </button>
-<button @click="goto('http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=ttEkKhtBjxd183_vapmlTZMHNbvrJ4oG&authKey=0GqhpwLZ4J%2Bp99h%2Blktqfq5lbFQVG9qbGuw1rMO9ehTFw5yjl6JxQ%2BS0qxm6jOza&noverify=0&group_code=995313755')">
+<button @click="goto('https://qm.qq.com/q/qI4xrwdM2c')">
     <p>Get Free</p>
 </button>
 </template>
