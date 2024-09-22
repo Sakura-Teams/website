@@ -1,9 +1,30 @@
-<script setup>
-
+<script>
+export default {
+    data () {
+        return {
+            initialText: '> A minecraft hack client whick can bypass AntiCheat',
+            index: 0,
+            text: ''
+        }
+    }, mounted() {
+        setInterval(()=>{
+            this.autoTyping()
+        }, 100);
+    }, methods: {
+        autoTyping(){
+            this.index++;
+            this.text = this.initialText.slice(0, this.index);
+            this.index = this.index === this.initialText.length ? 0:this.index;
+            if(this.index % 2){
+                this.text+=' |'
+            }
+        }
+    }
+}
 </script>
 
 <template>
-<p> > A minecraft hack client whick can bypass AntiCheat </p>
+<p> {{ text }} </p>
 </template>
 
 <style scoped>
