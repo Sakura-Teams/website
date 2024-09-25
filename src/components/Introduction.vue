@@ -2,9 +2,10 @@
 export default {
     data () {
         return {
-            initialText: '> A minecraft hack client whick can bypass AntiCheat',
+            initialText: '> A minecraft hack client which can bypass AntiCheat',
             index: 0,
-            text: ''
+            text: '',
+            front: true
         }
     }, mounted() {
         setInterval(()=>{
@@ -12,11 +13,24 @@ export default {
         }, 100);
     }, methods: {
         autoTyping(){
-            this.index++;
-            this.text = this.initialText.slice(0, this.index);
-            this.index = this.index === this.initialText.length ? 0:this.index;
-            if(this.index % 2){
-                this.text+='|'
+            if(this.front){
+                this.index++;
+                this.text = this.initialText.slice(0, this.index);
+                if(this.index % 2){
+                    this.text+='|'
+                }
+                if(this.index === this.initialText.length){
+                    this.front = false;
+                }
+            }else{
+                this.index--;
+                this.text = this.initialText.slice(0, this.index);
+                if(this.index % 2){
+                    this.text+='|'
+                }
+                if(this.index === 0){
+                    this.front = true;
+                }
             }
         }
     }
