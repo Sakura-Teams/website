@@ -16,7 +16,7 @@ export default {
             this.text = this.initialText.slice(0, this.index);
             this.index = this.index === this.initialText.length ? 0:this.index;
             if(this.index % 2){
-                this.text+=' |'
+                this.text+='|'
             }
         }
     }

@@ -1,10 +1,14 @@
 <script setup>
 
+function greet() {
+    alert("Hello.");
+}
+
 </script>
 
 <template>
     <div class="title-back">
-        <h1>Elaina Client</h1>
+        <button @click = "greet();">Elaina Client</button>
     </div>
 </template>
 
@@ -18,5 +22,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+button {
+    background: none;
+    border: none;
+    font-size: 3.2em;
+    line-height: 1.1;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 </style>
